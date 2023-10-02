@@ -20,10 +20,18 @@ This repository focuses on learning the security aspect of Android and how to se
 7. Done
 
 > [!NOTE]
-> Enable R8/Proguard and set `minifyEnabled` to `true` in order to prevent Reverse Engineering (for the release build)
-
-> [!NOTE]
 > In order to completely keep your `API_KEY` secured, keep them in the server and make the accessing code server-sided
 
 > [!NOTE]
 > No code is fool-proof and can be reverse-engineered but we can definitely prevent it to a large extent
+
+# Understanding Proguard rules
+1. Enable R8/Proguard and set `minifyEnabled` to `true` in order to prevent Reverse Engineering (for the release build)
+2. Set `shrinkResources` to `true` in order to reduce the file size of the release APK
+3. Sometimes, it happens that with the usage of proguard, it performs Code Obfuscation on the classes that shouldn't be altered. For example, `model classes`
+4. So, we add this code in the `proguard-rules.pro` file:
+   
+   ```Kotlin
+    -keep class com.example.packagename.model.*
+   ```
+
