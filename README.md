@@ -38,4 +38,6 @@ This repository focuses on learning the security aspect of Android and how to se
    ```Kotlin
     -keep class com.example.packagename.model.**{*;}
    ```
+> [!NOTE]
+> Check & add Proguard rules for every single dependency (can be found in their respective GitHub repo under Proguard section) in your application before releasing the app. Or, while working in the project
 
