@@ -19,3 +19,6 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# This line ensures that our model class is not renames while performing Code Obfuscation
+-keep class com.rajit.learningsecurity.model.*
