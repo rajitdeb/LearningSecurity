@@ -30,6 +30,7 @@ android {
         release {
             isMinifyEnabled = true
             isShrinkResources = true // This line helps in reducing our APK file size
+            isDebuggable = false // This prevents the apk to be Debuggable
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

@@ -34,4 +34,8 @@ This repository focuses on learning the security aspect of Android and how to se
    ```Kotlin
     -keep class com.example.packagename.model.*
    ```
+   Alternative approach to do this (applies to folders, sub-folders and its files):
+   ```Kotlin
+    -keep class com.example.packagename.model.**{*;}
+   ```
 
