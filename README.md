@@ -50,6 +50,6 @@ When we release our app to Google Play Store, and it is distributed to our users
 4. After the app bundle is successfully created, switch to `Project` view
 5. Then, go to app level `build` folder, go to `outputs -> mapping -> release` and find `mapping.txt` file
 
-> [!NOTE]
+> [!IMPORTANT]
 > Backup the `mapping.txt` file for every `release` build (every time you press `Build APK/Bundle`), because it creates a different map for every build.
 
