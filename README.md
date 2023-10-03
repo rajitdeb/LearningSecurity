@@ -42,3 +42,14 @@ This repository focuses on learning the security aspect of Android and how to se
 > [!NOTE]
 > Check & add Proguard rules for `every single dependency` (can be found in their respective `GitHub repo` under `Proguard` section) in your application before releasing the app. Or, while working in the project
 
+# How to understand the obfuscated code of our apps?
+When we release our app to Google Play Store, and it is distributed to our users, then the users are obviously using the release build. Now, whenever there is a crash that occurs in our app, we won't be apple to understand in which part the crash occurred. So, to overcome this situation, R8/Proguard provides a file to us which demonstrates which file is renamed to what and  we can use it to debug our code. We can find this file as follows:
+1. Select `Build -> Select Build Variant`
+2. Change the `Active Build Variant` from `debug` to `release`
+3. Go to `Build -> Build Bundle(s)/APK(s) -> Build Bundle`
+4. After the app bundle is successfully created, switch to `Project` view
+5. Then, go to app level `build` folder, go to `outputs -> mapping -> release` and find `mapping.txt` file
+
+> [!NOTE]
+> Backup the `mapping.txt` file for every `release` build (every time you press `Build APK/Bundle`), because it creates a different map for every build.
+
